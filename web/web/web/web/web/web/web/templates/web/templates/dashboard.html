@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Painel</title></head>
+<body>
+  <h2>Painel do Bot</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.message_text.label }}<br>{{ form.message_text(rows=3) }}<br>
+    {{ form.interval_minutes.label }}<br>{{ form.interval_minutes() }}<br>
+    {{ form.valid_time_minutes.label }}<br>{{ form.valid_time_minutes() }}<br>
+    {{ form.random_min.label }}<br>{{ form.random_min() }}<br>
+    {{ form.random_max.label }}<br>{{ form.random_max() }}<br>
+    {{ form.submit() }}
+  </form>
+  <a href="{{ url_for('main.logout') }}">Sair</a>
+</body>
+</html>
